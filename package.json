@@ -1,5 +1,22 @@
 {
-  "name": "electron-typescript",
+  "name": "cra-template-electron-react-ts",
+  "author": {
+    "name": "Elliott Blocha",
+    "email": "eblocha@gmail.com"
+  },
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eblocha/electron-react-typescript-template.git"
+  },
+  "keywords": [
+    "react",
+    "cra",
+    "create-react-app",
+    "template",
+    "boilerplate",
+    "typescript",
+    "electron"
+  ]
 }
