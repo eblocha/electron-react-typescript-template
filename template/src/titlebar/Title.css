@@ -1,0 +1,6 @@
+.title {
+    max-width: calc(100% - 298px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
