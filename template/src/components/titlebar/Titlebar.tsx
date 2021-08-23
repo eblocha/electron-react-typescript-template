@@ -28,24 +28,24 @@ const Titlebar = () => {
     return (
         <div className="titlebar">
             <TitleButtons>
-                <TitleButton
+            <TitleButton
                     variant="minimize"
-                    onClick={window.main.title.minimize}
+                    onClick={async () => await window.main.title.minimize()}
                 />
                 {maximized ? (
                     <TitleButton
                         variant="restore"
-                        onClick={window.main.title.restore}
+                        onClick={async () => await window.main.title.restore()}
                     />
                 ) : (
                     <TitleButton
                         variant="maximized"
-                        onClick={window.main.title.maximize}
+                        onClick={async () => await window.main.title.maximize()}
                     />
                 )}
                 <TitleButton
                     variant="close"
-                    onClick={window.main.title.close}
+                    onClick={async () => await window.main.title.close()}
                 />
             </TitleButtons>
             <DragRegion />
