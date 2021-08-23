@@ -1,8 +1,8 @@
 import React from 'react'
-import Close from '../icons/titlebar/Close'
-import Maximize from '../icons/titlebar/Maximize'
-import Minimize from '../icons/titlebar/Minimize'
-import Restore from '../icons/titlebar/Restore'
+import Close from '../../icons/titlebar/Close'
+import Maximize from '../../icons/titlebar/Maximize'
+import Minimize from '../../icons/titlebar/Minimize'
+import Restore from '../../icons/titlebar/Restore'
 import './TitleButton.css'
 
 type IProps = {

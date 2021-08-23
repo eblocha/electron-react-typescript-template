@@ -58,29 +58,29 @@ app.on('activate', () => {
 
 // IPC below here
 // Title bar callbacks
-ipcMain.handle('maximize', () => {
-    const win = BrowserWindow.getFocusedWindow()
+ipcMain.handle('maximize', e => {
+    const win = BrowserWindow.fromWebContents(e.sender)
     if (win) {
         win.maximize()
     }
 })
 
-ipcMain.handle('minimize', () => {
-    const win = BrowserWindow.getFocusedWindow()
+ipcMain.handle('minimize', e => {
+    const win = BrowserWindow.fromWebContents(e.sender)
     if (win) {
         win.minimize()
     }
 })
 
-ipcMain.handle('restore', () => {
-    const win = BrowserWindow.getFocusedWindow()
+ipcMain.handle('restore', e => {
+    const win = BrowserWindow.fromWebContents(e.sender)
     if (win) {
         win.restore()
     }
 })
 
-ipcMain.handle('close', () => {
-    const win = BrowserWindow.getFocusedWindow()
+ipcMain.handle('close', e => {
+    const win = BrowserWindow.fromWebContents(e.sender)
     if (win) {
         win.close()
     }

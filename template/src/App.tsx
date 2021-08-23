@@ -1,5 +1,5 @@
 import React from 'react'
-import Titlebar from './titlebar/Titlebar'
+import Titlebar from './components/titlebar/Titlebar'
 
 const App = () => {
     return (

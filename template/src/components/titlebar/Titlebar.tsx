@@ -23,7 +23,7 @@ const Titlebar = () => {
         return () => {
             rendered = false
         }
-    })
+    }, [])
 
     return (
         <div className="titlebar">
