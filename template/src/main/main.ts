@@ -85,3 +85,10 @@ ipcMain.handle('close', e => {
         win.close()
     }
 })
+
+ipcMain.handle('is-maximized', e => {
+    const win = BrowserWindow.fromWebContents(e.sender)
+    if (win) {
+        return win.isMaximized()
+    } else return false
+})

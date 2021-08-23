@@ -25,6 +25,20 @@ const Titlebar = () => {
         }
     }, [])
 
+    useEffect(() => {
+        let rendered = true
+        const checkIfMaximized = async () => {
+            const b = await window.main.title.isMaximized()
+            if (rendered) {
+                setMaximized(b)
+            }
+        }
+        checkIfMaximized()
+        return () => {
+            rendered = false
+        }
+    }, [])
+
     return (
         <div className="titlebar">
             <TitleButtons>

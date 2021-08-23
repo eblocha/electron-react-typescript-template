@@ -9,6 +9,7 @@ type API = {
         close: () => Promise<void>
         onMaximized: (fn: (...args: any[]) => void) => void
         onUnMaximized: (fn: (...args: any[]) => void) => void
+        isMaximized: () => Promise<boolean>
     }
 }
 
@@ -24,6 +25,7 @@ const api: API = {
         onUnMaximized: fn => {
             ipcRenderer.on('unmaximized', (event, ...args) => fn(...args))
         },
+        isMaximized: () => ipcRenderer.invoke('is-maximized'),
     },
 }
 
